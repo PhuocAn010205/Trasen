@@ -1,0 +1,120 @@
+:root{
+    --primary-color:#4daf54;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+     font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+body{
+    height:100vh;
+    background: linear-gradient(to right,#4daf54,#3d8880);
+}
+
+.card {
+    margin:120px auto;
+    width: 320px;
+    height: 400px;
+   background: #3d8880;
+   padding: 20px;
+   border-radius: 15px;
+   color: #fff;
+   position: relative;
+}
+    
+.card_heart,.card_cart {
+
+    font-size:25px;
+    position: absolute;
+    left: 20px;
+    top:15px;
+    cursor: pointer;
+
+}
+.card_cart{
+    left:unset;
+    right:20px;
+
+}
+
+.card_img {
+    width: 90%;
+    transition: 0.5s;
+}
+
+.card_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.card_title {
+
+}
+
+.card_title , .card_price {
+    font-size: 20px;
+    font-family: poppins, sans-serif;
+     font-style: normal;
+     font-weight: bold;
+     text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+.card_action button {
+  background: var(--primary-color);
+  border: none;
+  outline: none;
+  color:#fff;
+  padding: 10px 20px;
+  border-radius: 5px; 
+  font-weight: bold;
+  display: inline;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: 0.25s;
+}
+.card_action button:hover{
+    transform: scale(0.9)
+}
+.card:hover .card_img {
+    transform:translateY(-90px)  rotate(-20deg);
+    cursor: pointer;
+}
+.card:hover .card_title {
+    transform: translate(-10px,-80px);
+    transition: 0.5s;
+    cursor: pointer;
+    
+}
+
+.card:hover .card_price {
+    transform: translate(-10px,-80px);
+    transition: 0.5s;
+    cursor: pointer;  
+}
+.card_action {
+    justify-content: space-between;
+     display: flex;
+     margin-top: 150px;
+     visibility: hidden;
+     opacity: 0;
+  transition: 0.5s;
+  transition-delay:0.4s ;
+ }
+ 
+ .card:hover .card_action {
+    visibility:visible;
+    opacity: 100;
+    margin-top: -20px;
+    transition: 0.5;
+ }
